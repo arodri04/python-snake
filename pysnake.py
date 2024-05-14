@@ -1,7 +1,7 @@
 #starting the snake game
 
 #imports
-import math
+#import math
 import random
 import pygame
 import tkinter as tk
@@ -199,7 +199,7 @@ def main():
             snack = cube(randomSnack(rows, s), color=(0,255,0))
 
         for x in range(len(s.body)):
-            if s.body[x].pos in list(map(lambda z:z.pos, s.body[x+1:])):
+            if s.body[0].pos in list(map(lambda z:z.pos, s.body[x+1:])):
                 print('Score: ', len(s.body))
                 message_box("You Lose", "Play again")
                 s.reset((10,10))
